@@ -1,0 +1,98 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@800&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Sans-Serif, cursive;
+}
+
+.banner {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background: #000;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.banner #text {
+	position: relative;
+	font-size: 10em;
+	color: #ccc;
+	z-index: 2;
+	font-family: 'Dosis' , Sans-Serif;
+}
+
+.banner .clouds {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	pointer-events: none;
+}
+
+.banner .clouds img {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	animation: animate calc(3s * var(--i)) Linear infinite;
+}
+
+@keyframes animate {
+	
+	0% {
+		opacity: 0;
+		transform: scale(1);
+	}
+	
+	25% , 75% {
+		opacity: 1;
+	}
+	
+	100% {
+		transform: scale(3);
+	}
+	
+}
+
+section {
+	position: relative;
+	padding: 75px 100px;
+}
+
+section h2 {
+	position: relative;
+	font-family: 'Dosis' , Sans-Serif;
+	font-size:2em ;
+	margin-bottom: 20px;
+}
+
+section p {
+	position: relative;
+	font-size: 25px;
+}
+
+
+@media screen and (max-width:800px) {
+	
+	.banner #text {
+		font-size: 5em;
+		font-weight: bold;
+	}
+	
+	section {
+		padding: 30px 50px;
+	}
+	
+	section p {
+		font-size: 16px;
+	}
+	
+}
